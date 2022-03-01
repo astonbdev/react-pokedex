@@ -1,15 +1,25 @@
-"use strict";
+/** Pokecard Component
+ * 
+ * Props:
+ *  name: string
+ *  id: number
+ *  type: string
+ *  base_experience: number
+ * 
+ * Returns component of a single pokemon
+ */
 
-function Pokecard({ name, id, type }) {
+function Pokecard({ name, id, type, base_experience }) {
   const imgSrc = (
     `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
   );
 
   return (
-    <div>
+    <div className="Pokecard">
       <h3>{name}</h3>
-      <img alt="" src={imgSrc}></img>
-      <p>{type}</p>
+      <img alt={name} src={imgSrc}></img>
+      <p>Type: {type}</p>
+      <p>EXP: {base_experience}</p>
     </div>
   );
 }
