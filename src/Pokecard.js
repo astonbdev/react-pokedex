@@ -1,11 +1,11 @@
 /** Pokecard Component
- * 
+ *
  * Props:
  *  name: string
  *  id: number
  *  type: string
  *  base_experience: number
- * 
+ *
  * Returns component of a single pokemon
  */
 

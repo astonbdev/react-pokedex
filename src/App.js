@@ -1,16 +1,16 @@
 import './App.css';
-import Pokedex from './Pokedex';
+import Pokegame from './Pokegame';
 import { defaultPokemon } from './pokemon';
 
-/** App Component 
- * 
+/** App Component
+ *
  * Root level component
  */
 
 function App() {
   return (
     <div className="App">
-      <Pokedex pokemon={defaultPokemon} />
+      <Pokegame pokemon={defaultPokemon} />
     </div>
   );
 }
