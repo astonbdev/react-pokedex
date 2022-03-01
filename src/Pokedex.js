@@ -13,7 +13,8 @@ import { defaultPokemon } from "./pokemon";
  * App -> Pokedex -> Pokecard
  */
 
-function Pokedex({ pokemon = defaultPokemon }) {
+function Pokedex({ pokemon = defaultPokemon, totalExp, isWinner }) {
+  const winMessage = isWinner ? "You win!" : "You lose!";
   return (
     <div className="Pokedex" >
       {pokemon.map(p => {
@@ -23,6 +24,8 @@ function Pokedex({ pokemon = defaultPokemon }) {
           type={p.type}
           base_experience={p.base_experience} />
       })}
+      <h5 className="Exp">Total EXP: {totalExp} </h5>
+      <h5>{winMessage}</h5>
     </ div>
   );
 }
