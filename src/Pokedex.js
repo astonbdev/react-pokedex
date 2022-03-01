@@ -15,7 +15,7 @@ import { defaultPokemon } from "./pokemon";
 
 function Pokedex({ pokemon = defaultPokemon }) {
   return (
-    <div className="Pokedex">
+    <div className="Pokedex" >
       {pokemon.map(p => {
         return <Pokecard
           name={p.name}
@@ -23,7 +23,7 @@ function Pokedex({ pokemon = defaultPokemon }) {
           type={p.type}
           base_experience={p.base_experience} />
       })}
-    </div>
+    </ div>
   );
 }
 
